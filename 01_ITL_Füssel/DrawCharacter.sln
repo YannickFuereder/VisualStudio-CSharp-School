@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawCharacter", "DrawCharacter.csproj", "{D0117064-C43B-40A5-BD59-74B0CEE44B7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0117064-C43B-40A5-BD59-74B0CEE44B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0117064-C43B-40A5-BD59-74B0CEE44B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0117064-C43B-40A5-BD59-74B0CEE44B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0117064-C43B-40A5-BD59-74B0CEE44B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E920DB4C-2157-420C-8636-0F4A096D5BBB}
+	EndGlobalSection
+EndGlobal

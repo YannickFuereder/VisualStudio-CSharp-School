@@ -1,0 +1,15 @@
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\bin\Debug\net6.0\DrawCharacter.exe
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\bin\Debug\net6.0\DrawCharacter.deps.json
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\bin\Debug\net6.0\DrawCharacter.runtimeconfig.json
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\bin\Debug\net6.0\DrawCharacter.dll
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\bin\Debug\net6.0\ref\DrawCharacter.dll
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\bin\Debug\net6.0\DrawCharacter.pdb
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.csproj.AssemblyReference.cache
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.AssemblyInfoInputs.cache
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.AssemblyInfo.cs
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.csproj.CoreCompileInputs.cache
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.dll
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\ref\DrawCharacter.dll
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.pdb
+C:\Users\Moritz.Fuessel\Desktop\VisualStudio\01_ITL_Füssel\obj\Debug\net6.0\DrawCharacter.genruntimeconfig.cache
