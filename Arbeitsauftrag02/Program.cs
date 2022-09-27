@@ -62,7 +62,7 @@ namespace Arbeitsauftrag02
             Int64 tmpHeight = ReadInt("Höhe: ", left, ref top);
             Console.Clear();
             DrawVLine(left, top, tmpHeight);
-            Console.ReadLine();
+            Thread.Sleep(2000);
         }
 
         static void DrawVLine(int left, int top, Int64 height)
@@ -78,7 +78,7 @@ namespace Arbeitsauftrag02
             Int64 tmpWidth = ReadInt("Breite: ", left, ref top);
             Console.Clear();
             DrawHLine(left, top, tmpWidth);
-            Console.ReadLine();
+            Thread.Sleep(2000);
         }
 
         static void DrawHLine(int left, int top, Int64 width)
@@ -95,7 +95,7 @@ namespace Arbeitsauftrag02
             Int64 tmpWidth = ReadInt("Breite: ", left, ref top);
             Console.Clear();
             DrawRectangle(left, top, (int)tmpWidth, (int)tmpHeight);
-            Console.ReadLine();
+            Thread.Sleep(2000);
         }
 
         static void DrawRectangle(int left, int top, int width, int height)
@@ -113,7 +113,7 @@ namespace Arbeitsauftrag02
             Int64 tmpCols = ReadInt("Spalten: ", left, ref top);
             Console.Clear();
             DrawGrid(left, top, (int)tmpCellSize, (int)tmpRows, (int)tmpCols);
-            Console.ReadLine();
+            Thread.Sleep(2000);
         }
 
         static void DrawGrid(int top, int left, int cellSize, int nOfRows, int nOfCols)
