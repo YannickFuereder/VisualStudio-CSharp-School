@@ -1,0 +1,6 @@
+*/.vs/**
+*/bin/**
+*/obj/**
+**/**/.vs/**
+SiiSharp/SiiSharp/.vs/
+SiiSharp/SiiSharp/obj/

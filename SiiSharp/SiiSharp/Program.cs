@@ -4,7 +4,7 @@ namespace SiiSharp
 {
     class Program
     {
-        static void Foo(string[] args)
+       /* static void Foo(string[] args)
         {
             if(args.Length == 0)
             {
@@ -60,12 +60,45 @@ namespace SiiSharp
                 if (item == 'o') break;
                 Console.WriteLine(item);
             }
+        }*/
+
+        /*static void Foo2(int x, int y)
+        {
+            int z = x;
+            y = 100;
         }
 
         static void Main(string[] args)
         {
-            //Foo(args);
-            TextRepeater(args);
+            int x = 20;
+            int m = 100;
+            Foo2(x, m);
+        }*/
+        
+        /*static void Foo(ref int x, out int y)
+        {
+            x = 1001;
+            y = 1010;
         }
+
+        static void Main()
+        {
+            int x = 20;
+            int y = 100;
+            Foo(ref x, out y);
+        }*/
+
+        /*static void Foo(X m, Y n)
+        {
+            m = new X();
+            n = null;
+        }
+
+        static void Main()
+        {
+            X x = new X();
+            Y y = new Y();
+            Foo(x, y);
+        }*/
     }
 }
