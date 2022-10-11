@@ -43,19 +43,32 @@ namespace StringOper // Note: actual namespace depends on the project name.
             do {
                 tmpPos = xml.IndexOf(studentStart, tmpPos);
 
-                if (tmpPos != -1) {
-                    tmpPos += studentStart.Length;
-                    int tmpEndPos = xml.IndexOf(studentEnd, tmpPos);
+                if (tmpPos == -1) continue;
 
-                    if (tmpEndPos == -1) {
-                        tmpPos = -1;
-                    } else {
-                        string tmpName = xml.Substring(tmpPos, tmpEndPos - tmpPos);
-                        Console.WriteLine(tmpName);
-                        tmpPos += studentStart.Length;
-                    }
+                tmpPos += studentStart.Length;
+                int tmpEndPos = xml.IndexOf(studentEnd, tmpPos);
 
+                if (tmpEndPos == -1) {
+                    tmpPos = -1;
+                    continue;
                 }
+
+                
+
+                string tmpName = xml.Substring(tmpPos, tmpEndPos - tmpPos);
+
+                tmpPos = tmpEndPos + studentEnd.Length;
+
+                tmpName = tmpName.Trim();
+
+                if (string.IsNullOrWhiteSpace(tmpName)) continue;
+
+                string[] tmpValues = tmpName.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+
+                if (tmpValues.Length < 2) continue;
+
+                Console.WriteLine($"Nachname={tmpValues[0]} Vorname={tmpValues[1]}");
+                
                 
             } while (tmpPos != -1);
 
