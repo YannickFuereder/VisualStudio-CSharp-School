@@ -53,25 +53,41 @@ namespace StringOper // Note: actual namespace depends on the project name.
                     continue;
                 }
 
-                
-
                 string tmpName = xml.Substring(tmpPos, tmpEndPos - tmpPos);
 
                 tmpPos = tmpEndPos + studentEnd.Length;
 
-                tmpName = tmpName.Trim();
+                if (!ExtractNames(tmpName, out string tmpLastName, out string tmpFirstName)) continue;
 
-                if (string.IsNullOrWhiteSpace(tmpName)) continue;
+                Console.WriteLine($"Nachname={tmpLastName} Vorname={tmpFirstName}");
 
-                string[] tmpValues = tmpName.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 
-                if (tmpValues.Length < 2) continue;
 
-                Console.WriteLine($"Nachname={tmpValues[0]} Vorname={tmpValues[1]}");
-                
-                
             } while (tmpPos != -1);
 
+        }
+
+        static bool ExtractNames(string value, out string lastName, out string firstName) {
+            value = value.Trim();
+
+            if (string.IsNullOrWhiteSpace(value)) {
+                lastName = string.Empty;
+                firstName = string.Empty;
+                return false;
+            }
+            
+            string[] tmpValues = value.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (tmpValues.Length < 2) {
+                lastName = string.Empty;
+                firstName = string.Empty;
+                return false;
+            }
+
+            lastName = tmpValues[0];
+            firstName = tmpValues[1];
+
+            return true;
         }
     }
 }
