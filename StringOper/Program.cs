@@ -5,11 +5,13 @@ namespace StringOper // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
+        const string studentStart = "<student>";
+        const string studentEnd = "</student>";
+
         static void Main(string[] args) {
             /*string tmpXML = new string("\"Hallo\t\n\"");
 
-            string tmpXML1 = new string("C:/tmp/uu.txt")
-                ;
+            string tmpXML1 = new string("C:/tmp/uu.txt");
 
             string tmpXML2 = @"C:\tmp\uu.txt";
 
@@ -24,9 +26,9 @@ namespace StringOper // Note: actual namespace depends on the project name.
             string tmpXML = @"<xml>
                 <school>
                     <schoolClass name='2aAPC'>
-                        <student>Trocken Günther</student>
-                        <student>Schuster Franz</student>
                         <student>Mayr Hans</student>
+                        <student> Schuster Franz</student>
+                        <student> </student>
                     </schoolClass>
                 </school>
             </xml>";
@@ -37,7 +39,26 @@ namespace StringOper // Note: actual namespace depends on the project name.
         static void ParseXML(string xml) {
             if (string.IsNullOrEmpty(xml) || string.IsNullOrWhiteSpace(xml)) return;
 
-            
+            int tmpPos = 0;
+            do {
+                tmpPos = xml.IndexOf(studentStart, tmpPos);
+
+                if (tmpPos != -1) {
+                    tmpPos += studentStart.Length;
+                    int tmpEndPos = xml.IndexOf(studentEnd, tmpPos);
+
+                    if (tmpEndPos == -1) {
+                        tmpPos = -1;
+                    } else {
+                        string tmpName = xml.Substring(tmpPos, tmpEndPos - tmpPos);
+                        Console.WriteLine(tmpName);
+                        tmpPos += studentStart.Length;
+                    }
+
+                }
+                
+            } while (tmpPos != -1);
+
         }
     }
 }
