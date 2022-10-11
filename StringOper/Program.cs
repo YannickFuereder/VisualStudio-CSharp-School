@@ -23,17 +23,40 @@ namespace StringOper // Note: actual namespace depends on the project name.
             b.Append("sussy");
             b.Replace("ss", "nn");*/
 
-            string tmpXML = @"<xml>
-                <school>
-                    <schoolClass name='2aAPC'>
-                        <student>Mayr Hans</student>
-                        <student> Schuster Franz</student>
-                        <student> </student>
-                    </schoolClass>
-                </school>
-            </xml>";
+            /*FileInfo tmpFileInfo = new FileInfo("daten.xml");
+
+            if(!tmpFileInfo.Exists) {
+                Console.WriteLine("daten.xml exisiert nicht!");
+                return;
+            }
+            string tmpXML = string.Empty;
+            using (StreamReader r = tmpFileInfo.OpenText()) {
+                do {
+                    string? tmpLine = r.ReadLine();
+                    if (tmpLine == null) continue;
+                    tmpXML += tmpLine;
+                } while (!r.EndOfStream);
+                r.Close();
+            }*/
+
+            FileStream fs = new FileStream(".lock",FileMode.OpenOrCreate);
+            fs.Lock(0, fs.Length);
+
+            string path = "daten.xml";
+
+            if (!File.Exists(path)) {
+                Console.WriteLine($"{path} exisiert nicht!");
+                return;
+            }
+
+            string tmpXML = File.ReadAllText(path);
+
 
             ParseXML(tmpXML);
+
+            fs.Unlock(0, fs.Length);
+            fs.Close();
+            File.Delete(".lock");
         }
 
         static void ParseXML(string xml) {

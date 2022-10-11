@@ -1,0 +1,9 @@
+<xml>
+    <school>
+        <schoolClass name='2aAPC'>
+            <student>Mayr Hans</student>
+            <student> Schuster Franz</student>
+            <student> </student>
+        </schoolClass>
+    </school>
+</xml>
